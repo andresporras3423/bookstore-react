@@ -2,7 +2,7 @@
 
 First milestone of the Bookstore React Project, for Microverse academy, By Oscar Russi
 
-![screenshot](calculator-screenshot.png)
+![screenshot](screenshot.png)
 
 # What it does
 
