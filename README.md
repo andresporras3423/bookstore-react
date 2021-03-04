@@ -9,7 +9,7 @@ First milestone of the Bookstore React Project, for Microverse academy, By Oscar
 - Add linters to the project
 - Add react-redux, redux and prop-types
 - Deploy in Heroku
-- Remove unnecesary files
+- Remove unnecessary files
 
 # Build with
 
