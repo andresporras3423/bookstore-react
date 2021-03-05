@@ -1,22 +1,30 @@
 import { nanoid } from 'nanoid';
+import Book from './Book';
 
 function BooksList() {
-  const groups = [
-    ['AC', '+/-', '%', '÷'],
-    ['7', '8', '9', 'x'],
-    ['4', '5', '6', '-'],
-    ['1', '2', '3', '+'],
-    ['0', '.', '=']];
+  const books = [
+    { id: Math.random(), title: '100 years of solitude', category: 'Action' },
+    {},
+    {},
+    {},
+  ];
   return (
-    <div>
-      {
-          groups.map(group => (
-            <div className="calculator-group" key={nanoid()}>
-              {group}
-            </div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          books.map(book => (
+            <Book book={book} key={nanoid()} />
           ))
       }
-    </div>
+      </tbody>
+    </table>
   );
 }
 
