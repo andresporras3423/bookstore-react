@@ -1,13 +1,10 @@
 import { nanoid } from 'nanoid';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Book from './Book';
 
-function BooksList() {
-  const books = [
-    { id: Math.random(), title: '100 years of solitude', category: 'Action' },
-    { id: Math.random(), title: 'History is USA', category: 'History' },
-    { id: Math.random(), title: 'shining', category: 'Horror' },
-    { id: Math.random(), title: 'The crow', category: 'Horror' },
-  ];
+function BooksList(props) {
+  const { books } = props;
   return (
     <table>
       <thead>
@@ -28,4 +25,16 @@ function BooksList() {
   );
 }
 
-export default BooksList;
+const mapStateToProps = state => ({
+  books: state.books,
+});
+
+BooksList.propTypes = {
+  books: PropTypes.shape([]),
+};
+
+BooksList.defaultProps = {
+  books: null,
+};
+
+export default connect(mapStateToProps)(BooksList);
