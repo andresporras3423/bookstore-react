@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import './index.css';
 import App from './components/App';
 
+const wrap = (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {wrap}
   </React.StrictMode>,
   document.getElementById('root'),
 );
