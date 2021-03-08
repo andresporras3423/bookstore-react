@@ -1,9 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import store from './redux/store';
+import { createBook } from './actions/index';
+import rootReducer from './reducers/index';
 import './index.css';
 import App from './components/App';
+
+const initialState = {
+  books: [
+    { id: Math.random(), title: '100 years of solitude', category: 'Action' },
+    { id: Math.random(), title: 'History is USA', category: 'History' },
+    { id: Math.random(), title: 'The shining', category: 'Horror' },
+    { id: Math.random(), title: 'The crow', category: 'Horror' },
+  ],
+};
+
+const store = createStore(rootReducer);
+
+initialState.books.forEach(book => store.dispatch(createBook(book)));
 
 const wrap = (
   <Provider store={store}>

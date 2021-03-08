@@ -1,4 +1,4 @@
-import { CREATE_BOOK, REMOVE_BOOK } from './bookTypes';
+import { CREATE_BOOK, REMOVE_BOOK } from '../types/index';
 
 export const createBook = nBook => ({
   type: CREATE_BOOK,
@@ -7,7 +7,7 @@ export const createBook = nBook => ({
   category: nBook.category,
 });
 
-export const removeBook = id => ({
+export const removeBook = nBook => ({
   type: REMOVE_BOOK,
-  id,
+  book: nBook.id,
 });
