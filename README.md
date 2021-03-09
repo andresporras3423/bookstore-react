@@ -1,15 +1,16 @@
 # Bookstore-react
 
-First milestone of the Bookstore React Project, for Microverse academy, By Oscar Russi
+Second milestone of the Bookstore React Project, for Microverse academy, By Oscar Russi
 
 ![screenshot](screenshot.png)
 
 # What it does
 
-- Add linters to the project
-- Add react-redux, redux and prop-types
-- Deploy in Heroku
-- Remove unnecessary files
+- Add redux elements to the project: actions, reducers, types.
+- Using dispatch to add books.
+- Define two actions: create books and remove books.
+- Initialize the list of books with 4 books. Using math.random() for the books id.
+- Using Provider in the index.js
 
 # Build with
 
