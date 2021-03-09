@@ -9,5 +9,7 @@ export const createBook = nBook => ({
 
 export const removeBook = nBook => ({
   type: REMOVE_BOOK,
-  book: nBook.id,
+  id: nBook.id,
 });
+
+export default { createBook, removeBook };
