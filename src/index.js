@@ -10,9 +10,9 @@ import App from './components/App';
 const initialState = {
   books: [
     { id: Math.random(), title: '100 years of solitude', category: 'Action' },
-    { id: Math.random(), title: 'History is USA', category: 'History' },
+    { id: Math.random(), title: 'History of USA', category: 'History' },
     { id: Math.random(), title: 'The shining', category: 'Horror' },
-    { id: Math.random(), title: 'The crow', category: 'Horror' },
+    { id: Math.random(), title: 'Ruby for dummies', category: 'Learning' },
   ],
 };
 

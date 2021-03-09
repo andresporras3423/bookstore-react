@@ -1,10 +1,33 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 25px;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.booksForm {
+  display: grid;
+  padding: 25px;
+  text-align: left;
+}
+
+.booksForm > * {
+  height: 50px;
+}
+
+.form-span {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.btn-book-form {
+  margin-top: 25px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

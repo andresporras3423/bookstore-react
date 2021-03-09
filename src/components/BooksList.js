@@ -6,8 +6,8 @@ import Book from './Book';
 function BooksList(props) {
   const { books } = props;
   return (
-    <table>
-      <thead>
+    <table className="table table-bordered">
+      <thead className="thead-dark">
         <tr>
           <th>ID</th>
           <th>Title</th>
