@@ -6,19 +6,11 @@ function BooksForm(props) {
   const { handleCreateBook } = props;
   const [book, setBook] = useState({ title: '', category: 'Action' });
 
-  const handleChange = (name, value) => {
+  const handleChange = name => event => {
     setBook({
       ...book,
-      [name]: value,
+      [name]: event.target.value,
     });
-  };
-
-  const updateTitle = e => {
-    handleChange('title', e.target.value);
-  };
-
-  const updateCategory = e => {
-    handleChange('category', e.target.value);
   };
 
   const handleSubmit = event => {
@@ -40,13 +32,13 @@ function BooksForm(props) {
         name="myinput"
         id="myinput"
         value={book.title}
-        onChange={updateTitle}
+        onChange={handleChange('title')}
       />
       <span className="form-span">Category:</span>
       <select
         className="form-control"
         value={book.category}
-        onChange={updateCategory}
+        onChange={handleChange('category')}
         name="myinput2"
         id="myinput2"
       >
