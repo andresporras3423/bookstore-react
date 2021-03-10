@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createBook } from '../actions/index';
 
 function BooksForm(props) {
   const { handleCreateBook } = props;
@@ -53,6 +55,12 @@ function BooksForm(props) {
   );
 }
 
+const mapDispatchToProps = dispatch => ({
+  handleCreateBook: nBook => {
+    dispatch(createBook(nBook));
+  },
+});
+
 BooksForm.propTypes = {
   handleCreateBook: PropTypes.func,
 };
@@ -61,4 +69,4 @@ BooksForm.defaultProps = {
   handleCreateBook: null,
 };
 
-export default BooksForm;
+export default connect(null, mapDispatchToProps)(BooksForm);

@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { removeBook } from '../actions/index';
 
 function Book(props) {
   const { book, handleRemoveBook } = props;
@@ -17,6 +19,12 @@ function Book(props) {
   );
 }
 
+const mapDispatchToProps = dispatch => ({
+  handleRemoveBook: nBook => {
+    dispatch(removeBook(nBook));
+  },
+});
+
 Book.propTypes = {
   book: PropTypes.shape({
     id: PropTypes.number.isRequired,
@@ -31,4 +39,4 @@ Book.defaultProps = {
   handleRemoveBook: null,
 };
 
-export default Book;
+export default connect(null, mapDispatchToProps)(Book);

@@ -2,10 +2,9 @@ import { nanoid } from 'nanoid';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import { removeBook } from '../actions/index';
 
 function BooksList(props) {
-  const { books, handleRemoveBook } = props;
+  const { books } = props;
 
   return (
     <table className="table table-bordered">
@@ -20,7 +19,7 @@ function BooksList(props) {
       <tbody>
         {
           books.map(book => (
-            <Book book={book} handleRemoveBook={handleRemoveBook} key={nanoid()} />
+            <Book book={book} key={nanoid()} />
           ))
       }
       </tbody>
@@ -32,20 +31,12 @@ const mapStateToProps = state => ({
   books: state.book.books,
 });
 
-const mapDispatchToProps = dispatch => ({
-  handleRemoveBook: nBook => {
-    dispatch(removeBook(nBook));
-  },
-});
-
 BooksList.propTypes = {
   books: PropTypes.shape([]),
-  handleRemoveBook: PropTypes.func,
 };
 
 BooksList.defaultProps = {
   books: null,
-  handleRemoveBook: null,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
+export default connect(mapStateToProps)(BooksList);
