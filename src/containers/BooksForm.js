@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 
-function BooksForm() {
+function BooksForm(props) {
+  const { handleCreateBook } = props;
   const [book, setBook] = useState({ title: '', category: 'Action' });
 
   const handleChange = (name, value) => {
@@ -17,6 +19,15 @@ function BooksForm() {
 
   const updateCategory = e => {
     handleChange('category', e.target.value);
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    handleCreateBook({ id: Math.random(), title: book.title, category: book.category });
+    setBook({
+      title: '',
+      category: 'Action',
+    });
   };
 
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
@@ -45,9 +56,17 @@ function BooksForm() {
         ))
       }
       </select>
-      <input type="submit" value="save" className="btn btn-primary btn-book-form" />
+      <input type="submit" value="save" className="btn btn-primary btn-book-form" onClick={handleSubmit} />
     </form>
   );
 }
+
+BooksForm.propTypes = {
+  handleCreateBook: PropTypes.func,
+};
+
+BooksForm.defaultProps = {
+  handleCreateBook: null,
+};
 
 export default BooksForm;

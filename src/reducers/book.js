@@ -5,7 +5,7 @@ const bookReducer = (state = { books: [] }, action) => {
     case CREATE_BOOK: return {
       ...state,
       books: (() => {
-        const nBooks = state.books;
+        const nBooks = [...state.books];
         nBooks.push({ id: action.id, title: action.title, category: action.category });
         return nBooks;
       })(),
