@@ -7,9 +7,9 @@ Second milestone of the Bookstore React Project, for Microverse academy, By Osca
 # What it does
 
 - Using a stateful component in BooksForm.
-- Using dispatch to add books in Book component.
-- Using dispatch to create books in BooksForm component.
-- Using global state to update the list of book whenever a book is created or removed.
+- Using dispatch to add books in the Book component.
+- Using dispatch to create books in the BooksForm component.
+- Using the global state to update the list of books whenever a book is created or removed.
 - Using connect to pass global states and actions to the components as props.
 
 # Build with
