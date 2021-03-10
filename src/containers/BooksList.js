@@ -5,7 +5,7 @@ import Book from '../components/Book';
 import { removeBook } from '../actions/index';
 
 function BooksList(props) {
-  const { books, handleOnClick } = props;
+  const { books, handleRemoveBook } = props;
 
   return (
     <table className="table table-bordered">
@@ -20,7 +20,7 @@ function BooksList(props) {
       <tbody>
         {
           books.map(book => (
-            <Book book={book} handleOnClick={handleOnClick} key={nanoid()} />
+            <Book book={book} handleRemoveBook={handleRemoveBook} key={nanoid()} />
           ))
       }
       </tbody>
@@ -33,19 +33,19 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  handleOnClick: nBook => {
+  handleRemoveBook: nBook => {
     dispatch(removeBook(nBook));
   },
 });
 
 BooksList.propTypes = {
   books: PropTypes.shape([]),
-  handleOnClick: PropTypes.func,
+  handleRemoveBook: PropTypes.func,
 };
 
 BooksList.defaultProps = {
   books: null,
-  handleOnClick: null,
+  handleRemoveBook: null,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);

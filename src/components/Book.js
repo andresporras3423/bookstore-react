@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
 function Book(props) {
-  const { book, handleOnClick } = props;
+  const { book, handleRemoveBook } = props;
 
   const removeBook = () => {
-    handleOnClick(book);
+    handleRemoveBook(book);
   };
 
   return (
@@ -23,12 +23,12 @@ Book.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   }),
-  handleOnClick: PropTypes.func,
+  handleRemoveBook: PropTypes.func,
 };
 
 Book.defaultProps = {
   book: null,
-  handleOnClick: null,
+  handleRemoveBook: null,
 };
 
 export default Book;
