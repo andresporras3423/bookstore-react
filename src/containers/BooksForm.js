@@ -11,12 +11,17 @@ class BooksForm extends React.Component {
     this.state = {
       title: '',
       category: 'Action',
+      messages: ['', 'Book succesfully added', 'invalid book name'],
+      classes: ['', 'text-success', 'text-danger'],
+      status: 0,
     };
   }
 
   render() {
     const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-    const { title, category } = this.state;
+    const {
+      title, category, status, messages, classes,
+    } = this.state;
     const { handleCreateBook } = this.props;
     const handleChange = name => event => {
       this.setState({
@@ -26,6 +31,10 @@ class BooksForm extends React.Component {
 
     const handleSubmit = event => {
       event.preventDefault();
+      if (title === '') {
+        this.setState({ status: 2 });
+        return;
+      }
       handleCreateBook({
         id: Math.random(),
         title,
@@ -34,6 +43,7 @@ class BooksForm extends React.Component {
       this.setState({
         title: '',
         category: 'Action',
+        status: 1,
       });
     };
 
@@ -63,6 +73,7 @@ class BooksForm extends React.Component {
       }
         </select>
         <input type="submit" value="save" className="btn btn-primary btn-book-form" onClick={handleSubmit} />
+        <span className={classes[status]}>{messages[status]}</span>
       </form>
     );
   }
