@@ -9,8 +9,8 @@ Second milestone of the Bookstore React Project, for Microverse academy, By Osca
 - Add CategoryFilter component inside BooksList.
 - Add filter state to save the category for the filter.
 - Add filter reducer to update the filter category state.
-- Passing down the dispatch action to update filter from booksList to CategoryFilter.
-- Created method to update list of books, using the filter, in booksList component.
+- Passing down the dispatch action to update filter from BooksList to CategoryFilter.
+- Created a method to update the list of books, using the filter, in the BooksList component.
 
 # Build with
 
