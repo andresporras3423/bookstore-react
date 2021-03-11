@@ -2,41 +2,59 @@ import { nanoid } from 'nanoid';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import CategoryFilter from '../components/CategoryFilter';
+import { changeFilter } from '../actions/index';
 
 function BooksList(props) {
-  const { books } = props;
+  const { books, category, handleFilterChange } = props;
+
+  const filterBooks = () => books.filter(book => book.category === category || category === 'All');
 
   return (
-    <table className="table table-bordered">
-      <thead className="thead-dark">
-        <tr>
-          <th>ID</th>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Remove</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          books.map(book => (
+    <div>
+      <CategoryFilter handleFilterChange={handleFilterChange} />
+      <table className="table table-bordered">
+        <thead className="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+          filterBooks().map(book => (
             <Book book={book} key={nanoid()} />
           ))
       }
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    </div>
   );
 }
 
+const mapDispatchToProps = dispatch => ({
+  handleFilterChange: category => {
+    dispatch(changeFilter(category));
+  },
+});
+
 const mapStateToProps = state => ({
   books: state.book.books,
+  category: state.filter.category,
 });
 
 BooksList.propTypes = {
   books: PropTypes.shape([]),
+  category: PropTypes.string,
+  handleFilterChange: PropTypes.func,
 };
 
 BooksList.defaultProps = {
   books: null,
+  category: 'All',
+  handleFilterChange: null,
 };
 
-export default connect(mapStateToProps)(BooksList);
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);

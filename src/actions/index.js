@@ -1,4 +1,4 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../types/index';
+import { CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER } from '../types/index';
 
 export const createBook = nBook => ({
   type: CREATE_BOOK,
@@ -12,4 +12,9 @@ export const removeBook = nBook => ({
   id: nBook.id,
 });
 
-export default { createBook, removeBook };
+export const changeFilter = category => ({
+  type: CHANGE_FILTER,
+  category,
+});
+
+export default { createBook, removeBook, changeFilter };

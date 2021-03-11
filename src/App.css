@@ -31,6 +31,13 @@
   margin-top: 25px;
 }
 
+.select-filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
