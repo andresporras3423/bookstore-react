@@ -18,6 +18,7 @@ Second milestone of the Bookstore React Project, for Microverse academy, By Osca
 - [Webpack](https://webpack.js.org/)
 - [npm](https://www.npmjs.com/)
 - [Heroku](https://www.heroku.com/)
+- [Redux](https://redux.js.org/)
 
 # Live demo
 
