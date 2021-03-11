@@ -5,6 +5,7 @@ import Book from '../components/Book';
 
 function BooksList(props) {
   const { books } = props;
+
   return (
     <table className="table table-bordered">
       <thead className="thead-dark">
@@ -12,6 +13,7 @@ function BooksList(props) {
           <th>ID</th>
           <th>Title</th>
           <th>Category</th>
+          <th>Remove</th>
         </tr>
       </thead>
       <tbody>

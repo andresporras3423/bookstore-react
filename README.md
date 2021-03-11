@@ -6,11 +6,11 @@ Second milestone of the Bookstore React Project, for Microverse academy, By Osca
 
 # What it does
 
-- Add redux elements to the project: actions, reducers, types.
-- Using dispatch to add books.
-- Define two actions: create books and remove books.
-- Initialize the list of books with 4 books. Using Math.random() for the book's id.
-- Using Provider in the index.js.
+- Using a stateful component in BooksForm.
+- Using dispatch to add books in the Book component.
+- Using dispatch to create books in the BooksForm component.
+- Using the global state to update the list of books whenever a book is created or removed.
+- Using connect to pass global states and actions to the components as props.
 
 # Build with
 
