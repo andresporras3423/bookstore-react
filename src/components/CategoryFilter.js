@@ -10,17 +10,20 @@ function CategoryFilter(props) {
   };
 
   return (
-    <select
-      className="form-control"
-      value={category}
-      onChange={changeFilter}
-    >
-      {
+    <div className="select-filter">
+      <span>Filter by category:</span>
+      <select
+        className="form-control"
+        value={category}
+        onChange={changeFilter}
+      >
+        {
         categories.map(category => (
           <option value={category} key={nanoid()}>{category}</option>
         ))
       }
-    </select>
+      </select>
+    </div>
   );
 }
 
