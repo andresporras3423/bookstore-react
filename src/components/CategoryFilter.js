@@ -1,13 +1,12 @@
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { changeFilter } from '../actions/index';
 
 function CategoryFilter(props) {
-  const { handleChangeFilter, category } = props;
+  const { handleFilterChange, category } = props;
   const categories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const changeFilter = event => {
-    handleChangeFilter(event.target.value);
+    handleFilterChange(event.target.value);
   };
 
   return (
@@ -29,20 +28,14 @@ const mapStateToProps = state => ({
   category: state.filter.category,
 });
 
-const mapDispatchToProps = dispatch => ({
-  handleChangeFilter: category => {
-    dispatch(changeFilter(category));
-  },
-});
-
 CategoryFilter.propTypes = {
-  handleChangeFilter: PropTypes.func,
+  handleFilterChange: PropTypes.func,
   category: PropTypes.string,
 };
 
 CategoryFilter.defaultProps = {
-  handleChangeFilter: null,
+  handleFilterChange: null,
   category: 'All',
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CategoryFilter);
+export default connect(mapStateToProps)(CategoryFilter);
