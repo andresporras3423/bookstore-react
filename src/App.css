@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  /* display: grid; */
+  /* grid-template-columns: 1fr 2fr; */
   padding: 25px;
 }
 
@@ -36,6 +36,69 @@
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 25px;
   align-items: center;
+}
+
+.Bookstore-CMS {
+  width: 240px;
+  height: 37px;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: hsl(206, 100%, 50%);
+}
+
+.BOOKS {
+  width: 59px;
+  height: 16px;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+}
+
+.CATEGORIES {
+  width: 105px;
+  height: 16px;
+  opacity: 0.5;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+}
+
+.panel-bg {
+  /* max-width: 1400px; */
+  height: 95px;
+  margin: 0 0 38px;
+  padding: 23px 99px 27px 100px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 3fr 1fr 6fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.Oval {
+  width: 45px;
+  height: 45px;
+  /* margin: 0 0 0 664px; */
+  padding: 14px;
+  border: solid 1px #e8e8e8;
+}
+
+.Mask {
+  width: 17px;
+  height: 17px;
+  background-color: #0290ff;
 }
 
 @media (prefers-reduced-motion: no-preference) {
