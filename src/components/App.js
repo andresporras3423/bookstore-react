@@ -1,18 +1,12 @@
 import '../App.css';
 import BooksForm from '../containers/BooksForm';
 import BooksList from '../containers/BooksList';
+import BooksHeader from '../containers/BookHeader';
 
 function App() {
   return (
     <div className="App">
-      <nav className="panel-bg">
-        <h1 className="Bookstore-CMS">Bookstore CMS</h1>
-        <span className="BOOKS">BOOKS</span>
-        <span className="CATEGORIES">CATEGORIES</span>
-        <span className="Oval">
-          <span className="Mask" />
-        </span>
-      </nav>
+      <BooksHeader />
       <BooksList />
       <BooksForm />
     </div>

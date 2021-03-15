@@ -76,7 +76,6 @@
 }
 
 .panel-bg {
-  /* max-width: 1400px; */
   height: 95px;
   margin: 0 0 38px;
   padding: 23px 99px 27px 100px;
@@ -90,7 +89,7 @@
 .Oval {
   width: 45px;
   height: 45px;
-  /* margin: 0 0 0 664px; */
+  border-radius: 50%;
   padding: 14px;
   border: solid 1px #e8e8e8;
 }
@@ -98,7 +97,6 @@
 .Mask {
   width: 17px;
   height: 17px;
-  background-color: #0290ff;
 }
 
 @media (prefers-reduced-motion: no-preference) {
