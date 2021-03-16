@@ -11,7 +11,7 @@ function BooksList(props) {
   const filterBooks = () => books.filter(book => book.category === category || category === 'All');
 
   return (
-    <div>
+    <div className="booksList">
       <CategoryFilter handleFilterChange={handleFilterChange} />
       <table className="table border-color">
         <tbody>

@@ -71,6 +71,11 @@
   color: #121212;
 }
 
+.booksList {
+  padding-left: 127px;
+  padding-right: 275px;
+}
+
 .border-color td,
 .border-color th {
   border-color: white;
