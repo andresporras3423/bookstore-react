@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { removeBook } from '../actions/index';
+import Ring from './Ring';
 
 function Book(props) {
   const { book, handleRemoveBook } = props;
@@ -21,7 +22,9 @@ function Book(props) {
           <button type="submit" className="link Comments">Edit</button>
         </p>
       </td>
-      <td>{book.title}</td>
+      <td>
+        <Ring completed={book.completed} />
+      </td>
       <td>{book.category}</td>
     </tr>
   );
@@ -39,6 +42,7 @@ Book.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
+    completed: PropTypes.number.isRequired,
   }),
   handleRemoveBook: PropTypes.func,
 };
