@@ -3,6 +3,10 @@
   padding: 25px;
 }
 
+.user-icon {
+  margin-bottom: 11px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -191,6 +195,63 @@
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+}
+
+.Current-Chapter {
+  opacity: 0.5;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  text-align: left;
+}
+
+.Current-Lesson {
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+  text-align: left;
+}
+
+.Rectangle-2 {
+  width: 184px;
+  padding: 7px 19px 8px 22px;
+  border-radius: 3px;
+  border-width: 0;
+  background-color: #0290ff;
+}
+
+.Update-progress {
+  width: 143px;
+  height: 18px;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.first-column {
+  width: 400px;
+  display: block;
+}
+
+tr .second-column {
+  padding-right: 50px;
+}
+
+.third-column {
+  display: grid;
 }
 
 @media (prefers-reduced-motion: no-preference) {
