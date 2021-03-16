@@ -18,7 +18,7 @@ class BooksForm extends React.Component {
   }
 
   render() {
-    const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+    const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Science Fiction', 'Economy'];
     const {
       title, category, status, messages, classes,
     } = this.state;

@@ -11,10 +11,18 @@ function Book(props) {
 
   return (
     <tr>
-      <td>{book.id}</td>
+      <td>
+        <p className="School-of">{book.category}</p>
+        <p className="title">{book.title}</p>
+        <p className="Suzanne-Collins">{book.author}</p>
+        <p className="links-container">
+          <button type="submit" className="link Comments">Comments</button>
+          <button type="submit" className="link Comments" onClick={removeBook}>Remove</button>
+          <button type="submit" className="link Comments">Edit</button>
+        </p>
+      </td>
       <td>{book.title}</td>
       <td>{book.category}</td>
-      <td><button type="submit" onClick={removeBook}>Remove book</button></td>
     </tr>
   );
 }
@@ -30,6 +38,7 @@ Book.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
   }),
   handleRemoveBook: PropTypes.func,
 };

@@ -10,10 +10,15 @@ import App from './components/App';
 
 const initialState = {
   books: [
-    { id: Math.random(), title: '100 years of solitude', category: 'Action' },
-    { id: Math.random(), title: 'History of USA', category: 'History' },
-    { id: Math.random(), title: 'The shining', category: 'Horror' },
-    { id: Math.random(), title: 'Ruby for dummies', category: 'Learning' },
+    {
+      id: Math.random(), title: 'The Hunger Games', category: 'Action', author: 'Suzanne Collins', completed: 64, chapter: 'Chapter 17',
+    },
+    {
+      id: Math.random(), title: 'Dune', category: 'Science Fiction', author: 'Frank Herbert', completed: 8, chapter: 'Chapter 3:\'A lesson learned\'',
+    },
+    {
+      id: Math.random(), title: 'Capital in the Twenty-First Century', category: 'Economy', author: 'Suzanne Collins', completed: 0, chapter: 'Introduction',
+    },
   ],
 };
 

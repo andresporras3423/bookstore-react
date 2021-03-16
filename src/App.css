@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  /* display: grid; */
-  /* grid-template-columns: 1fr 2fr; */
   padding: 25px;
 }
 
@@ -32,10 +30,50 @@
 }
 
 .select-filter {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 25px;
-  align-items: center;
+  display: none;
+}
+
+.link {
+  text-align: left;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.School-of {
+  width: 112px;
+  height: 18px;
+  text-align: left;
+  margin: 0 39px 0 0;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title {
+  width: 365px;
+  height: 29px;
+  text-align: left;
+  margin: 3px 323px 0 0;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.border-color td,
+.border-color th {
+  border-color: white;
 }
 
 .Bookstore-CMS {
@@ -99,12 +137,6 @@
   height: 17px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -118,6 +150,47 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.Suzanne-Collins {
+  width: 107px;
+  height: 19px;
+  text-align: left;
+  margin: 4px 0 0;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.links-container {
+  width: 307px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+}
+
+.Comments {
+  width: 83px;
+  height: 19px;
+  margin: 3px 15px 2px 0;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 @keyframes App-logo-spin {
