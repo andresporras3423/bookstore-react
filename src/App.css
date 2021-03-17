@@ -16,9 +16,11 @@
   display: grid;
   padding: 25px;
   text-align: left;
+  padding-left: 139px;
+  padding-right: 145px;
 }
 
-.booksForm > * {
+form.booksForm > * {
   height: 50px;
 }
 
@@ -30,7 +32,8 @@
 }
 
 .btn-book-form {
-  margin-top: 25px;
+  height: 38px;
+  width: 184px;
 }
 
 .select-filter {
@@ -253,6 +256,41 @@ tr .second-column {
 
 .third-column {
   display: grid;
+}
+
+.title2 {
+  width: 174px;
+  height: 24px;
+  margin: 29px 524px 19px 0;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.row2-form {
+  display: grid;
+  grid-template-columns: 33fr 14fr 9fr;
+  grid-gap: 45px;
+}
+
+.text-form {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+.text-form::placeholder,
+.text-form::-ms-input-placeholder,
+.text-form:-ms-input-placeholder {
+  color: #c4c4c4;
 }
 
 @media (prefers-reduced-motion: no-preference) {
