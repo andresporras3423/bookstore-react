@@ -1,16 +1,15 @@
 # Bookstore-react
 
-Second milestone of the Bookstore React Project, for Microverse academy, By Oscar Russi
+Fifth milestone of the Bookstore React Project, for Microverse academy, By Oscar Russi
 
 ![screenshot](screenshot.png)
 
 # What it does
 
-- Add CategoryFilter component inside BooksList.
-- Add filter state to save the category for the filter.
-- Add filter reducer to update the filter category state.
-- Passing down the dispatch action to update filter from BooksList to CategoryFilter.
-- Created a method to update the list of books, using the filter, in the BooksList component.
+- Cloned the required design available in Zeplin: [Bookstore Design](https://cdn.zeplin.io/5b35a9e13227086040f8eb75/screens/C4825D1D-4395-448F-9640-44B9775F3B1B.png).
+- Created BookHeader component for the header of the page.
+- Created Ring component for the ring progress bar to use in the list of books.
+- Modified redux states, actions and reducers for the new book attributes.
 
 # Build with
 

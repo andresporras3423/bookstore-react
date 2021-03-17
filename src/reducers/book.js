@@ -6,7 +6,14 @@ const bookReducer = (state = { books: [] }, action) => {
       ...state,
       books: (() => {
         const nBooks = [...state.books];
-        nBooks.push({ id: action.id, title: action.title, category: action.category });
+        nBooks.push({
+          id: action.id,
+          title: action.title,
+          category: action.category,
+          author: action.author,
+          completed: action.completed,
+          chapter: action.chapter,
+        });
         return nBooks;
       })(),
     };

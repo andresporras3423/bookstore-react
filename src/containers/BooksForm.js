@@ -10,7 +10,7 @@ class BooksForm extends React.Component {
 
     this.state = {
       title: '',
-      category: 'Action',
+      category: null,
       messages: ['', 'Book succesfully added', 'invalid book name'],
       classes: ['', 'text-success', 'text-danger'],
       status: 0,
@@ -18,7 +18,7 @@ class BooksForm extends React.Component {
   }
 
   render() {
-    const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+    const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Science Fiction', 'Economy'];
     const {
       title, category, status, messages, classes,
     } = this.state;
@@ -39,6 +39,9 @@ class BooksForm extends React.Component {
         id: Math.random(),
         title,
         category,
+        chapter: 'Chapter 1',
+        completed: 0,
+        author: 'Anonymous',
       });
       this.setState({
         title: '',
@@ -49,30 +52,33 @@ class BooksForm extends React.Component {
 
     return (
       <form className="form-group booksForm">
-        <span className="form-span">Title:</span>
-        <input
-          type="text"
-          className="form-control"
-          name="myinput"
-          id="myinput"
-          value={title}
-          onChange={handleChange('title')}
-        />
-        <span className="form-span">Category:</span>
-        <select
-          className="form-control"
-          value={category}
-          onChange={handleChange('category')}
-          name="myinput2"
-          id="myinput2"
-        >
-          {
+        <h1 className="title2">ADD NEW BOOK</h1>
+        <div className="row2-form">
+          <input
+            type="text"
+            className="form-control text-form"
+            name="myinput"
+            id="myinput"
+            value={title}
+            placeholder="Book title"
+            onChange={handleChange('title')}
+          />
+          <select
+            className="form-control text-form"
+            value={category}
+            onChange={handleChange('category')}
+            name="myinput2"
+            id="myinput2"
+          >
+            <option value="" disabled selected>Category</option>
+            {
         categories.map(category => (
           <option value={category} key={nanoid()}>{category}</option>
         ))
       }
-        </select>
-        <input type="submit" value="save" className="btn btn-primary btn-book-form" onClick={handleSubmit} />
+          </select>
+          <input type="submit" value="ADD BOOK" className="btn btn-primary btn-book-form" onClick={handleSubmit} />
+        </div>
         <span className={classes[status]}>{messages[status]}</span>
       </form>
     );

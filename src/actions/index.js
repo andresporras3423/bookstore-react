@@ -5,6 +5,9 @@ export const createBook = nBook => ({
   id: nBook.id,
   title: nBook.title,
   category: nBook.category,
+  author: nBook.author,
+  completed: nBook.completed,
+  chapter: nBook.chapter,
 });
 
 export const removeBook = nBook => ({

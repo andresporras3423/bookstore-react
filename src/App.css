@@ -1,8 +1,10 @@
 .App {
   text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
   padding: 25px;
+}
+
+.user-icon {
+  margin-bottom: 11px;
 }
 
 .App-logo {
@@ -14,9 +16,11 @@
   display: grid;
   padding: 25px;
   text-align: left;
+  padding-left: 139px;
+  padding-right: 145px;
 }
 
-.booksForm > * {
+form.booksForm > * {
   height: 50px;
 }
 
@@ -28,20 +32,121 @@
 }
 
 .btn-book-form {
-  margin-top: 25px;
+  height: 38px;
+  width: 184px;
 }
 
 .select-filter {
+  display: none;
+}
+
+.link {
+  text-align: left;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.School-of {
+  width: 112px;
+  height: 18px;
+  text-align: left;
+  margin: 0 39px 0 0;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title {
+  width: 365px;
+  height: 29px;
+  text-align: left;
+  margin: 3px 323px 0 0;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.booksList {
+  padding-left: 127px;
+  padding-right: 275px;
+}
+
+.border-color td,
+.border-color th {
+  border-color: white;
+}
+
+.Bookstore-CMS {
+  width: 240px;
+  height: 37px;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: hsl(206, 100%, 50%);
+}
+
+.BOOKS {
+  width: 59px;
+  height: 16px;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.CATEGORIES {
+  width: 105px;
+  height: 16px;
+  opacity: 0.5;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.panel-bg {
+  height: 95px;
+  margin: 0 0 38px;
+  padding: 23px 99px 27px 100px;
+  background-color: #fff;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 25px;
+  grid-template-columns: 3fr 1fr 6fr 1fr;
+  justify-content: center;
   align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Oval {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  padding: 14px;
+  border: solid 1px #e8e8e8;
+}
+
+.Mask {
+  width: 17px;
+  height: 17px;
 }
 
 .App-header {
@@ -57,6 +162,141 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.Suzanne-Collins {
+  width: 107px;
+  height: 19px;
+  text-align: left;
+  margin: 4px 0 0;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.links-container {
+  width: 307px;
+  margin: 0;
+  margin-top: 21px;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+}
+
+.Comments {
+  width: 83px;
+  height: 19px;
+  margin: 3px 15px 2px 0;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.Current-Chapter {
+  opacity: 0.5;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  text-align: left;
+}
+
+.Current-Lesson {
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+  text-align: left;
+}
+
+.Rectangle-2 {
+  width: 184px;
+  margin-top: 15px;
+  padding: 7px 19px 8px 22px;
+  border-radius: 3px;
+  border-width: 0;
+  background-color: #0290ff;
+}
+
+.Update-progress {
+  width: 143px;
+  height: 18px;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.first-column {
+  width: 400px;
+  display: block;
+}
+
+tr .second-column {
+  padding-right: 50px;
+}
+
+.third-column {
+  display: grid;
+}
+
+.title2 {
+  width: 174px;
+  height: 24px;
+  margin: 29px 524px 19px 0;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.row2-form {
+  display: grid;
+  grid-template-columns: 33fr 14fr 9fr;
+  grid-gap: 45px;
+}
+
+.text-form {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+.text-form::placeholder,
+.text-form::-ms-input-placeholder,
+.text-form:-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 @keyframes App-logo-spin {
