@@ -39,6 +39,9 @@ class BooksForm extends React.Component {
         id: Math.random(),
         title,
         category,
+        chapter: 'Chapter 1',
+        completed: 0,
+        author: 'Anonymous',
       });
       this.setState({
         title: '',
