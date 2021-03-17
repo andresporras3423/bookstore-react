@@ -9,7 +9,7 @@ Fifth milestone of the Bookstore React Project, for Microverse academy, By Oscar
 - Cloned the required design available in Zeplin: [Bookstore Design](https://cdn.zeplin.io/5b35a9e13227086040f8eb75/screens/C4825D1D-4395-448F-9640-44B9775F3B1B.png).
 - Created BookHeader component for the header of the page.
 - Created Ring component for the ring progress bar to use in the list of books.
-- Modify redux states, actions and reducers for the new book attributes.
+- Modified redux states, actions and reducers for the new book attributes.
 
 # Build with
 
